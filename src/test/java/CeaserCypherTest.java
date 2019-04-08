@@ -3,12 +3,6 @@ import static org.junit.Assert.*;
 
 public class CeaserCypherTest {
     @Test
-    public void cypher_checkForNumbers_String(){
-        CeaserCypher testCeaserCypher = new CeaserCypher();
-        String expectedOutput = "Enter letters only";
-        assertEquals(expectedOutput, testCeaserCypher.cypher("Encrypt234", 2));
-    }
-    @Test
     public void cypher_checkValueOfKey_String(){
         CeaserCypher testCeaserCypher = new CeaserCypher();
         String expectedOutput = "The key must between 1 and 25";
