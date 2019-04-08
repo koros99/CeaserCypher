@@ -44,11 +44,11 @@ public class CeaserCypherTest {
         String expectedOutput = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
         assertEquals(expectedOutput, testCeaserCypher.cypher("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 23));
     }
-//    @Test
-//    public void cypher_testDecryption_String(){
-//        CeaserCypher testCeaserCypher = new CeaserCypher();
-//        String expectedOutput = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
-//        assertEquals(expectedOutput, testCeaserCypher.decypher("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", 23));
-//    }
+    @Test
+    public void cypher_testDecryption_String(){
+        CeaserCypher testCeaserCypher = new CeaserCypher();
+        String expectedOutput = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+        assertEquals(expectedOutput, testCeaserCypher.decypher("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", 23));
+    }
 }
 
