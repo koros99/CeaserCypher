@@ -32,13 +32,23 @@ public class CeaserCypherTest {
         String expectedOutput = "IFMMP";
         assertEquals(expectedOutput, testCeaserCypher.cypher("HELLO", 1));
     }
+    @Test
+    public void cypher_checkCaseInsensitivity_String(){
+        CeaserCypher testCeaserCypher = new CeaserCypher();
+        String expectedOutput = "Ifmmp";
+        assertEquals(expectedOutput, testCeaserCypher.cypher("Hello", 1));
+    }
+    @Test
+    public void cypher_checkSentenceCypher_String(){
+        CeaserCypher testCeaserCypher = new CeaserCypher();
+        String expectedOutput = "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD";
+        assertEquals(expectedOutput, testCeaserCypher.cypher("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 23));
+    }
+//    @Test
+//    public void cypher_testDecryption_String(){
+//        CeaserCypher testCeaserCypher = new CeaserCypher();
+//        String expectedOutput = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+//        assertEquals(expectedOutput, testCeaserCypher.decypher("QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD", 23));
+//    }
 }
 
-
-//    @Test
-//    public void runPingPong_countUpToOne_ArrayList(){
-//        PingPong testPingPong = new PingPong();
-//        List<Object> expectedOutput = new ArrayList<Object>();
-//        expectedOutput.add(1);
-//        assertEquals(expectedOutput, testPingPong.runPingPong(1));
-//    }
